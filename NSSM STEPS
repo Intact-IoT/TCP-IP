@@ -1,0 +1,25 @@
+Non-Sucking Service Manager
+
+1. Download NSSM:
+    Go to the official NSSM download page.
+    Download the appropriate version for your system (32-bit or 64-bit).
+    Extract the downloaded ZIP file.
+2. Place NSSM:
+    Copy the extracted "nssm.exe" to a directory, for example, C:\Program Files\NSSM.
+    It is recommended to add this directory to your system's PATH environment variable for easier command line use.
+3. Open Command Prompt as Administrator.
+4. Install a service using NSSM:
+    nssm install <servicename>
+    This will open the NSSM service installer GUI
+      In the Application tab, set the path to your executable in the "Path" field.
+      you can provide the .exe file path in the blank space(1 blank space)
+      for example(D:\Server code\dist\plc.exe
+      Optionally, set the "Startup directory" and any command line arguments in "Arguments".
+      you can provide the .exe file path in the blank space(2 blank space)
+      for example(D:\Server code\dist
+      you can provide nothing blank space(3 blank space)
+      Click "Install service" to complete the service setup.
+5. Manage the installed service:
+      Start the service: nssm start <servicename>
+      Stop the service: nssm stop <servicename>
+      Remove the service: nssm remove <servicename>
